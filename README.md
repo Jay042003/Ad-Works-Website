@@ -27,7 +27,7 @@ virtualenv env
 pip install pymonogo
 ```
 ```bash
-pip install virtualenv
+pip install flask
 ```
 
 ## You can run the website by running the instruction in terminal in VS code
