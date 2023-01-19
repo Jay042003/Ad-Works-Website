@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<section id="contact">
+    <div class="mt-5">
+        {% if success %}
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Thank you!</strong> We will get back to you.
+            <a href="/contact_us"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></a>
+          </div>
+        {% endif %}
+    </div>
+    <div class="container-fluid ">
+        <div class="mt-5 p-5 bg-dark text-white rounded mb-2 mx-4" data-bs-theme="dark">
+            <div class="container-fluid mt-5" style="text-align: center;">
+                <h2 style="color: white;" >Contact us</h2>
+             </div>
+            <form action="/contacting" method="post">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                        <label for="Name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="Name" name="name" aria-describedby="emailHelp" placeholder="Name" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="mb-3">
+                        <label for="Mobile" class="form-label">Mobile No.</label>
+                        <input type="number" class="form-control" id="Mobile" name="mobile" placeholder="Mobile" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email Address" required></div>
+                <div class="mb-3 ">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="messages" rows="3" placeholder="Type here"></textarea>
+                <div class="mt-3" >
+                    <button type="submit" class="btn btn-outline-warning btn-rounded">Submit</button>
+                </div>  
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}

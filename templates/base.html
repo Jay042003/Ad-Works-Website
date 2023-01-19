@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3bf8326a08.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/login.css">
+    <!-- web -->
+    <!-- Favicons -->
+  <link href="/static/assets/img/logo.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="/static/assets/css/style.css" rel="stylesheet">
+    <title>AdWorks</title>
+</head>
+<body style="background-color:black;">
+
+
+  <!-- <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between" >
+      <div class="container">
+      <a href="/" class="logo me-auto me-lg-0"><img src="/static/logo.png" alt="logo" class="img-fluid" style="border: 2px solid white; border-radius: 10px;"></a>
+    </div>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/aboutus">About</a></li>
+          <li><a class="nav-link scrollto" href="/services">Our Services</a></li>
+          <li><a class="nav-link scrollto" href="/contact_us">Contact Us</a></li>
+        </ul>
+        <i class="fa-solid fa-bars mobile-nav-toggle" style="color:white ;"></i>
+      </nav>
+      {% if login==False %}
+        <a href="/login" class="get-started-btn scrollto" style="margin-left: 650px;">Login</a>
+        <a href="/register" class="get-started-btn scrollto">Register</a>
+      {% endif %}
+      {% if login == True %}
+      <div class="container d-flex align-items-center justify-content-lg-between" style="margin-left: 750px;">
+        <i style="color: white;" class="fa-regular fa-user"></i>
+        <a href="/logout" class="get-started-btn scrollto" style="margin-left: 10px;">Logout</a>
+      </div>
+      {% endif %}
+    </div>
+  </header>  -->
+  <!-- End Header -->
+ 
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <!-- <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg> -->
+          <img src="/static/logo.png" alt="logo" class="img-fluid" style="border: 2px solid white; border-radius: 10px;height: 40px;margin-right: 10px;">
+        </a>
+        <!-- <a href="/" class="logo me-auto me-lg-0"></a> -->
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="/aboutus" class="nav-link px-2 text-white">About us</a></li>
+          <li><a href="/services" class="nav-link px-2 text-white">Services</a></li>
+          <li><a href="/contact_us" class="nav-link px-2 text-white">Contact us</a></li>
+        </ul>
+
+
+        <div class="text-end">
+          {% if login==False %}
+            <a href="/login"><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+            <a href="/register"><button type="button" class="btn btn-warning">Register</button></a>
+          {% endif %}
+          {% if login == True %}
+            <i style="color: white;margin-right: 20px;" class="fa-regular fa-user"></i>
+            <a href="/logout"><button type="button"  class="btn btn-outline-light me-2">Logout</button></a>
+          {% endif %}
+        </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  
+{% block body %}{% endblock body %}
+<div class="col g-0">
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0 mt-5">
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              AD Works
+            </h6>
+            <p>
+            We are helping various businesses with their advertisement needs. Adworks is a onestop solution which promotes your business on social media platforms.  
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Specialization</h6>
+            <p>
+              <a class="text-white">Content Design</a>
+            </p>
+            <p>
+              <a class="text-white">Copy Writing</a>
+            </p>
+            <p>
+              <a class="text-white">Engagement</a>
+            </p>
+            <p>
+              <a class="text-white">Hastag Research</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <pre><i class="fa fa-building"></i> Sardar Vallabhbhai National
+ Institute of Technology,
+ Ichchhanath Surat-Dumas,
+ Road,Keval Chowk,Surat,
+ Gujarat 395507</pre>
+            <p><i class="fa fa-phone mr-3"></i> + 91 972391835</p>
+            <p><i class="fa fa-envelope mr-3"></i> dhruvilshah@gmail.com</p>
+            <p><i class="fa fa-instagram mr-3"></i> @dhruvil_shahhh</p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+
+            <!-- Facebook -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #3b5998"
+                href="#!"
+                role="button"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            <!-- Twitter -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #55acee"
+                href="#!"
+                role="button"
+                ><i class="fa fa-twitter"></i
+              ></a>
+            <!-- Instagram -->
+            <a
+                class="btn btn-primary btn-floating m-1"
+                style="background-color: #ac2bac"
+                href="https://instagram.com/adworks.in?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                role="button"
+                ><i class="fa fa-instagram"></i>
+              </a>
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+          >
+      © 2023 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/"
+          >AdWorks.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
