@@ -1,7 +1,7 @@
 # Google winter of code,GDSC,SVNIT
 ## Team Name: Pheonix
 ## Team members: Jay Kadel, Akash singh, Gaurav Singh, Biren Gami
-# Projection Description
+# Project Description
 ### Adworks is website for Advertisement Needs. Adworks Helps Brands Establish And Enhance Their Social Media Presence. This website contains home page,our services page,About Us page and contact Us page. It is a complete Responsive Websites.
 Website is made using python so you will require [python](https://www.python.org/downloads/) on your device.
 
@@ -24,7 +24,7 @@ virtualenv env
 ```
 3.after this you can install the following libraries
 ```bash
-pip install pymonogo
+pip install pymongo
 ```
 ```bash
 pip install flask
