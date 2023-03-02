@@ -4,19 +4,22 @@ import pymongo
 import smtplib
 import ssl
 from email.message import EmailMessage
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
-
-client = pymongo.MongoClient("mongodb+srv://ad_work:jaykadel@cluster0.ocwlhjq.mongodb.net/?retryWrites=true&w=majority")
+load_dotenv()
+Database_link = os.environ.get('Database_link')
+secret_password = os.environ.get('secert_password')
+client = pymongo.MongoClient(Database_link)
 db = client.Ad_works
 
-# client = MongoClient('mongodb+srv://jay_1020:jaykadel@cluster0.ocwlhjq.mongodb.net/?retryWrites=true&w=majority')
 db = client["AD_Works"]
 collection = db["User"]
 
 email_sender = 'noreplyadworks@gmail.com'
-email_password = 'dchfudiwhnoprekp'
-email_receiver = ''
+email_password = ''
+email_receiver = 'kadejay666@gmail.com'
 
 loggedin=False
 
