@@ -18,7 +18,7 @@ db = client["AD_Works"]
 collection = db["User"]
 
 email_sender = 'noreplyadworks@gmail.com'
-email_password = ''
+email_password = secret_password
 email_receiver = 'kadejay666@gmail.com'
 
 loggedin=False
